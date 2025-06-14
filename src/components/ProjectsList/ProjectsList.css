@@ -1,0 +1,7 @@
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px); /*cria quantas colunas couberem com 500px cada*/
+    justify-content: center;
+    gap: 30px;
+    padding-top: 30px;
+}

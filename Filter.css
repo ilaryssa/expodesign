@@ -1,7 +1,7 @@
 .filter-container {
   display: flex;
   justify-content: right;
-  padding-right: 20px;
+  padding-right: 50px;
   gap: 16px;
   margin-bottom: 32px;
   font-weight: 500;
@@ -40,16 +40,18 @@
 .left-column, .right-colunm {
   display: flex;
   flex-direction: column;
-  padding: 8px;
+  padding: px;
 }
 
 .left-column {
   border-right: 1px solid #ddd;
-  min-width: 140px;
+  min-width: 100px;
 }
 
 .right-colunm {
-  min-width: 140px;
+  /* min-width: 140px; */
+  min-width: auto;
+  white-space: nowrap; /*impede que o texto quebre em varias linhas*/
 }
 
 .filter-item, .value-item {

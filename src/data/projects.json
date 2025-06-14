@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "titulo": "Sistema de Acessibilidade para Ambientes Virtuais de Aprendizagem",
+    "ano": "2024",
+    "disciplina": "IHC",
+    "autor": "Laryssa Santos",
+    "imagem": "/montega-carao.jpg",
+    "tags": ["UX", "Acessibilidade", "Web"]
+  },
+  {
+    "id": 2,
+    "titulo": "Plataforma de Gestão de Projetos Acadêmicos",
+    "ano": "2022",
+    "disciplina": "PIW",
+    "autor": "Carlos Almeida",
+    "imagem": "/montega-carao.jpg",
+    "tags": ["Sistema", "Dashboard", "React"]
+  },
+  {
+    "id": 3,
+    "titulo": "Tipografia Experimental: Redesign de Fontes Clássicas",
+    "ano": "2023",
+    "disciplina": "Tipografia",
+    "autor": "Ianara Sítila",
+    "imagem": "/montega-carao.jpg",
+    "tags": ["Lettering", "Fonte", "Design Gráfico"]
+  },
+  {
+    "id": 4,
+    "titulo": "Aplicativo de Monitoramento de Saúde Mental para Universitários",
+    "ano": "2024",
+    "disciplina": "IHC",
+    "autor": "João Ferreira",
+    "imagem": "/montega-carao.jpg",
+    "tags": ["UX", "Mobile", "Saúde"]
+  },
+  {
+    "id": 5,
+    "titulo": "Campanha Visual para Conscientização Ambiental",
+    "ano": "2020",
+    "disciplina": "Projeto de Design",
+    "autor": "Ana Beatriz",
+    "imagem": "/montega-carao.jpg",
+    "tags": ["Campanha", "Sustentabilidade", "Mídia Impressa"]
+  },
+  {
+    "id": 6,
+    "titulo": "Redesign do Portal Institucional da Universidade",
+    "ano": "2025",
+    "disciplina": "IHC",
+    "autor": "Lazaro Freitas",
+    "imagem": "/montega-carao.jpg",
+    "tags": ["UX", "UI", "Web"]
+  },
+  {
+    "id": 7,
+    "titulo": "Sistema de Agendamento para Laboratórios de Informática",
+    "ano": "2021",
+    "disciplina": "PIW",
+    "autor": "Marcos Oliveira",
+    "imagem": "/montega-carao.jpg",
+    "tags": ["Sistema", "Back-end", "Node.js"]
+  },
+  {
+    "id": 8,
+    "titulo": "Identidade Visual para Feira de Produtos Locais",
+    "ano": "2023",
+    "disciplina": "Projeto de Design",
+    "autor": "Brena Silva",
+    "imagem": "/montega-carao.jpg",
+    "tags": ["Branding", "Identidade Visual", "Gráfico"]
+  },
+  {
+    "id": 9,
+    "titulo": "Desenvolvimento de Jogo Educativo para Ensino Médio",
+    "ano": "2025",
+    "disciplina": "Jogos Digitais",
+    "autor": "Luana Pereira",
+    "imagem": "/montega-carao.jpg",
+    "tags": ["Game", "Educação", "Interação"]
+  }
+]

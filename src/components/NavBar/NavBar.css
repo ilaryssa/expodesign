@@ -1,0 +1,104 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding-inline: 20px;
+  z-index: 1000;
+  background-color: #dfdfdf;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+nav {
+  display: flex;
+  padding: 0px 50px 0px 50px;
+  gap: 30px; /*distancia entre os elementos*/
+  align-items: center;
+  justify-content: end;
+  height: 100%;
+}
+nav a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+nav a:hover {
+  color: #555555;
+}
+.submit-project {
+  background-color: black;
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+.submit-project:hover {
+  background-color: #a8a8a8;
+  color: #000000;
+  border-radius: 25px;
+  transition: background-color 0.1s ease-in-out;
+  border: none;
+}
+.hello-admin {
+  display: flex;
+  align-items: center;
+  background-color: #c0c0c0;
+  height: 100%;
+  text-decoration: none;
+  padding: 0px 12px;
+}
+.underline-text {
+  border-bottom: 1px solid black;
+}
+.underline-text-hover:hover {
+  border-bottom: 1px solid #555555;
+  color: #555555;
+}
+/*adicionar class logo*/
+.log-out {
+  background-color: transparent;
+  border: none;
+  padding: 2px 8px 2px 8px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-size: larger;
+}
+.log-out:hover {
+  color: #555555;
+  border-radius: 10px;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px; /* Ajustar a margem direita para centralizar a barra de pesquisa */
+  background-color: #eeeeee;
+  border-radius: 25px;
+  padding: 5px;
+  width: 20%; 
+}
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 7px 15px 7px 15px;
+  background-color: transparent;
+  font-size: medium;
+  width: 100%;
+}
+.search-icon{
+  margin-left: 10px;
+}
+

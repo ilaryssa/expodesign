@@ -2,6 +2,7 @@ import { useState } from "react";
 import projects from "../data/projects.json";
 import ProjectsList from "../components/ProjectsList/ProjectsList.jsx";
 import Filter from "../components/Filter/Filter.jsx";
+ 
 
 export default function ProjectsPage() {
   const [filter, setFilter] = useState(null);

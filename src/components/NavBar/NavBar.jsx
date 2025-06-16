@@ -4,7 +4,6 @@ import { BsSearch } from "react-icons/bs";
 import { BsBoxArrowRight } from "react-icons/bs"; 
 
 
-
 function Navbar() {
   const adminName = "Laryssa"; 
   return (

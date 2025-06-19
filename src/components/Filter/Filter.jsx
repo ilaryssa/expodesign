@@ -1,24 +1,17 @@
 import { useState, useEffect } from "react";
 import "./Filter.css";
 
-// const filters = {
-//     Ano: ["2025", "2024", "2023", "2022"],
-//     Disciplina: ["Tipografia", "IHC", "Multimídia"],
-//     Categoria: ["Branding", "Identidade Visual", "Protótipo"],
-//     Autor: ["Ana", "Guto", "Carlos"]
-// };
-
 export default function Filter({projects, setFilter}) {
     const [filters, setFilters] = useState({});
     const [openMenu, setOpenMenu] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [selectedValue, setSelctedValue] = useState(null);
 
-    useEffect(() => {
-        const newFilters = {
-            Ano:[...new Set(projects.map((p) => p.ano))],
-            Disciplina:[...new Set(projects.map((p) => p.disciplina))],
-            Categoria:[...new Set(projects.flatMap((p) => p.tags))],
+    useEffect(() => { // Popula os filtros com base nos projetos    
+        const newFilters = { // Cria um objeto para armazenar os filtros
+            Ano:[...new Set(projects.map((p) => p.ano))].sort((a,b) => b - a), //.map extrai os anos dos projetos; para cada projeto, p.ano retorna o ano do projeto; sort((a,b) => b - a) ordena os anos em ordem decrescente
+            Disciplina:[...new Set(projects.map((p) => p.disciplina))].sort(),
+            Categoria:[...new Set(projects.flatMap((p) => p.tags))].sort(),
             Autor:[...new Set(projects.map((p) => p.autor))].sort(),
         };
         setFilters(newFilters);
@@ -35,12 +28,12 @@ export default function Filter({projects, setFilter}) {
     };
 
     return (
-        <div className="filter-container">
-            <h3>Filtrar por:</h3>
+        <div className="filter-container" alt="Filtro de projetos">
+            <h3 className="filter-title">Filtrar por:</h3>
             <div className="filter-wrapper">
                 <div className="dropdown">
                     <button className="select-button" onClick={() => {
-                        setOpenMenu(!openMenu);
+                        setOpenMenu(!openMenu); //
                         setSelectedCategory(null);
                     }}>
                         {selectedValue || "Selecionar"}

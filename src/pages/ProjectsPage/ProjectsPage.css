@@ -1,0 +1,51 @@
+.projects-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    width: 100%;
+    padding-left: 10%;
+    padding-top: 2%;
+    padding-right: 10%;
+}
+
+.projects-page-title {
+    margin: 0;
+    font-size: 37px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.projects-actions {
+    display: flex;
+    gap: 1rem; /*rem faz com que o espaçamento seja relativo ao tamanho da fonte, tornando-o responsivo*/
+    align-items: center;                                    
+}
+
+.button-new-project {
+    text-align: right;
+    width: 140px;
+    height: 40px;
+    padding: 8px 16px;
+    background: #898989;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+}
+
+.button-new-project:hover {
+    background: #5d5d5d;
+}
+
+.icon-button-new-project {
+    position: absolute;
+    display: flex;
+    margin-left: -6px;
+    margin-top: -2px;
+    width: 20px;
+    height: 20px;
+}   

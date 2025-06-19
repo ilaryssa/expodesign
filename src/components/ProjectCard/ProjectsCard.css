@@ -2,28 +2,24 @@
     background-color: #c3adff;
     border-radius: 10px;
     overflow: hidden;
-    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); */
     display: flex;
     flex-direction: column; 
     max-width: 374px;
     min-width: 300px;
     width: 100%; /*faz com que o card ocupe 100% do espaço disponível*/
-    margin: 0 auto;
+    margin: 1rem; /*margem de 1rem em todos os lados*/
 } 
-/* card */
 
 .projects-card:hover {
     background-color: #a888ff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 } 
-/* card */
 
 .image-box {
     position: relative;
     width: 100%;
     height: 265px;
 }
-/* card */
 
 .image-box img {
     width: 100%;
@@ -33,7 +29,6 @@
     max-width: 374px;
     margin: 0 auto;
 }
-/* card */
 
 .card-tags {
     position: absolute;
@@ -43,7 +38,6 @@
     flex-wrap: wrap;
     gap: 6px;
 }
-/* card */
 
 .card-tags .tag {
     background-color: rgba(0, 0, 0, 0.75);
@@ -53,7 +47,6 @@
     padding: 5px 10px;
     border-radius: 16px;
 }
-/* card */
 
 .projects-card-title {
     font-size: 20px;
@@ -65,14 +58,24 @@
     line-clamp: 2; /*essa tem a mesma função da de cima, so que por casos de compatibilidade, usa-se os dois*/
     -webkit-box-orient: vertical; /*direcao da caixa flexivel*/
     text-overflow: ellipsis; /*adiciona ... no final quando o texto for "cortado"*/
-}
-/* card */
-
-.projects-page-title {
-    font-size: 37px;
     text-align: left;
-    padding-left: 150px;
-    color: #333;
+    padding: 10px;
 }
-/* card */
 
+.projects-trash {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    background-color: grey;
+    border: 5px solid grey;
+    border-radius: 5px;
+}
+
+.projects-trash:hover {
+    color: grey;
+    background-color: #fff;
+    border: 5px solid #fff;
+}

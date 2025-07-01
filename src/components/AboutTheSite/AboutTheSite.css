@@ -1,0 +1,88 @@
+.aboutTheSiteContainer {
+  padding: 40px 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #000;
+  text-align: left;
+}
+
+.introSection h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.introSection p {
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 200px;
+  background-color: #dfdfdf;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.creatorsSection h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+
+.creatorCard {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.photoPlaceholder {
+  width: 60px;
+  height: 60px;
+  background-color: #dfdfdf;
+  border-radius: 50%;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.creatorCard h4 {
+  font-size: 14px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.creatorRole {
+  margin: 4px 0;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.creatorDescription {
+  font-size: 12px;
+  margin-top: 4px;
+  text-align: justify;
+}
+
+.scrollToTopButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  background-color: #dfdfdf;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrollToTopButton:hover {
+  background-color: #aaa;
+}

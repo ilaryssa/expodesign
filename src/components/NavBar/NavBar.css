@@ -15,7 +15,7 @@
   height: 70px;
   padding-inline: 20px;
   z-index: 1000;
-  background-color: #dfdfdf;
+  background-color: var(--darkPurple);
   font-family:Arial, Helvetica, sans-serif;
   font-size: medium;
   box-sizing: border-box;
@@ -23,62 +23,48 @@
 nav {
   display: flex;
   padding: 0px 50px 0px 50px;
-  gap: 30px; /*distancia entre os elementos*/
+  gap: 30px;
   align-items: center;
   justify-content: end;
   height: 100%;
 }
 nav a{
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: var(--iceWhite);
   font-size: small;
   font-weight: bold;
-}
-nav a:hover {
-  color: #555555;
-}
-.submit-project {
-  background-color: black;
-  color: white;
-  font-size: small;
-  font-weight: bold;
-  padding: 5px 15px;
-  border-radius: 25px;
-  border: none;
-  cursor: pointer;
-}
-.submit-project:hover {
-  background-color: #a8a8a8;
-  color: #000000;
-  border-radius: 25px;
-  transition: background-color 0.1s ease-in-out;
-  border: none;
 }
 .hello-admin {
   display: flex;
   align-items: center;
-  background-color: #c0c0c0;
+  background-color: var(--midPurple);
+  color: var(--iceWhite);
   height: 100%;
   text-decoration: none;
   padding: 0px 12px;
 }
 .underline-text {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--iceWhite);
 }
 .underline-text-hover:hover {
-  border-bottom: 1px solid #555555;
-  color: #555555;
+  border-bottom: 1px solid  var(--lightPurple);
+  color: var(--lightPurple);
 }
-/*adicionar class logo*/
+
+.logo {
+  color: var(--iceWhite);
+  padding-top: 10px;
+}
+
 .log-out {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  color: rgb(0, 0, 0);
+  color: var(--midPurple);
   font-size: medium;
 }
 .log-out:hover {
-  color: #555555;
+  color: var(--lightPurple);
   border-radius: 10px;
 }
 .search-bar {
@@ -86,10 +72,10 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   margin-right: 20px; /* Ajustar a margem direita para centralizar a barra de pesquisa */
-  background-color: #eeeeee;
+  background-color: #F8F8F8; /*iceWhite*/;
   border-radius: 25px;
   padding: 5px;
-  width: 22%; 
+  width: 22%;
 }
 .search-bar input {
   border: none;
@@ -101,5 +87,7 @@ nav a:hover {
 }
 .search-icon{
   margin-left: 10px;
+  color: #532980; /*darkPurple*/
+
 }
 

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react';  //comentário Thayná: isso aqui já foi importado no app, então não precisa colocar nos componentes
 
 const creators = [
   { name: 'Fulano', role: 'Design gráfico' },
   { name: 'Fulano', role: 'Design gráfico' },
   { name: 'Fulano', role: 'Design gráfico' },
   { name: 'Fulano', role: 'Design gráfico' },
-];
+]; 
 
 const CreatorsSection = () => (
   <section className="creatorsSection">

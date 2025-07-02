@@ -1,4 +1,7 @@
-.aboutTheSiteContainer {
+.aboutTheSiteContainer { /*cometário Thayná: ajusta o css pra ficar padronizado com o restante*/
+                         /*coloca about-the-site-container, ou intro-section*/
+                         /*o nome usando letras maiusculas deixa pra nome do arquivo e nome de função*/
+                         /*não esquece de ajustar nos arquivos jsx também, já que as classes são de lá*/
   padding: 40px 20px;
   max-width: 700px;
   margin: 0 auto;

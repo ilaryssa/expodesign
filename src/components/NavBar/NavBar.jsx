@@ -1,30 +1,54 @@
-import React from 'react';
-import './NavBar.css'; // já que você disse que o CSS já está pronto
+import { Link, useNavigate } from "react-router-dom";
 import { BsSearch } from "react-icons/bs"; 
 import { BsBoxArrowRight } from "react-icons/bs"; 
+import  Logo from '../../assets/expodesign-logo.svg?react';
+import './NavBar.css';
+import SubmitProject from '../SubmitProject/SubmitProject';
+import Alert from "../Alert/Alert"
+import {useState} from 'react';
 
 
-function Navbar() {
+export default function Navbar() {
   const adminName = "Laryssa"; 
-  return (
-    <header className="nav-bar">
-      <a href=""><img className="logo" src="logo.svg" alt="Logo" />EXPO DESIGN</a>
-      <div className="search-bar">
-          <span className="search-icon"><BsSearch/></span> 
-          <input type="text" placeholder="Pesquisar por títulos, autores, tags..."/>
-      </div>
-      <nav>
-            <a className="underline-text-hover" href="#">PROJETOS</a>
-            <a className="underline-text-hover" href="#">SOBRE O SITE</a>
-            <button className="submit-project">EXPOR PROJETO</button> {/*Não sei se deixo assi*/}
-            
-            <a className='hello-admin' href="#" ><span className="underline-text">Olá, {adminName}!</span></a> 
-            
-            <button className="log-out"><BsBoxArrowRight /></button> {/*acho que Olá, admin e o button deveriam ser separados em outra div*/}
 
-      </nav>
-    </header>
+  const [openAlert, setOpenAlert] = useState(false);
+  const navigate = useNavigate();
+
+  const logout = () => {
+    navigate("/projetos"); //criar a nova tela de usuario
+    setOpenAlert(false); //obrigada laryssa
+  }
+
+  return (
+    <>
+      {openAlert && <Alert setOpen= {setOpenAlert} onConfirm={logout} />}  
+
+      <header className="nav-bar">
+        {/*logo*/}
+        {/*<a href="expodesign-logo.svg"><img className="logo" src="logo.svg" alt="Logo" /></a>*/}
+
+        <Link to="/projetos" className="logo"><Logo/></Link>
+
+        {/*barra de pesquisa*/}
+        <div className="search-bar">
+            <span className="search-icon"><BsSearch/></span> 
+            <input type="text" placeholder="Pesquisar por títulos, autores, tags..."/>
+        </div>
+
+        {/*rotas*/}
+        <nav>
+              <Link to="/projetos" className="underline-text-hover">PROJETOS</Link>
+              <Link to="/sobre-o-site" className="underline-text-hover">SOBRE O SITE</Link>
+              <SubmitProject />
+              <a className='hello-admin'><span className="underline-text">Olá, {adminName}!</span></a>
+              
+              <button className="log-out" onClick={() =>setOpenAlert(true)}><BsBoxArrowRight /></button> 
+
+        </nav>
+      </header>
+    </>
+
   );
+
 }
 
-export default Navbar;

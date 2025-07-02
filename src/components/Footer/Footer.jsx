@@ -1,3 +1,4 @@
+//ajustar o nome das classes. por exemplo menu-footer
 import './footer.css';
 import { BsInstagram, BsWhatsapp, BsGeoAlt } from 'react-icons/bs';
 

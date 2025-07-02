@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import { BsArrowUp } from 'react-icons/bs';
 
 const ScrollToTopButton = () => {

@@ -1,4 +1,6 @@
-import React from 'react';
+//esse componente não é necessário, você pode fazer essa introdução no próprio arquivo da PAGE
+
+import React from 'react'; 
 
 const IntroSection = () => (
   <section className="introSection">

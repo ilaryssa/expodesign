@@ -1,7 +1,4 @@
-.aboutTheSiteContainer { /*cometário Thayná: ajusta o css pra ficar padronizado com o restante*/
-                         /*coloca about-the-site-container, ou intro-section*/
-                         /*o nome usando letras maiusculas deixa pra nome do arquivo e nome de função*/
-                         /*não esquece de ajustar nos arquivos jsx também, já que as classes são de lá*/
+.about-the-site-container {
   padding: 40px 20px;
   max-width: 700px;
   margin: 0 auto;
@@ -10,19 +7,19 @@
   text-align: left;
 }
 
-.introSection h2 {
+.intro-section h2 {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.introSection p {
+.intro-section p {
   font-size: 13px;
   line-height: 1.4;
   margin-bottom: 10px;
 }
 
-.imagePlaceholder {
+.image-placeholder {
   width: 100%;
   height: 200px;
   background-color: #dfdfdf;
@@ -30,21 +27,20 @@
   margin-top: 20px;
 }
 
-.creatorsSection h3 {
+.creators-section h3 {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
   margin-top: 40px;
 }
 
-
-.creatorCard {
+.creator-card {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.photoPlaceholder {
+.photo-placeholder {
   width: 60px;
   height: 60px;
   background-color: #dfdfdf;
@@ -53,25 +49,25 @@
   flex-shrink: 0;
 }
 
-.creatorCard h4 {
+.creator-card h4 {
   font-size: 14px;
   margin: 0;
   font-weight: bold;
 }
 
-.creatorRole {
+.creator-role {
   margin: 4px 0;
   font-size: 12px;
   font-weight: bold;
 }
 
-.creatorDescription {
+.creator-description {
   font-size: 12px;
   margin-top: 4px;
   text-align: justify;
 }
 
-.scrollToTopButton {
+.scroll-to-top-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -86,6 +82,6 @@
   justify-content: center;
 }
 
-.scrollToTopButton:hover {
+.scroll-to-top-button:hover {
   background-color: #aaa;
 }

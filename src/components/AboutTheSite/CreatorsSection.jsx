@@ -1,22 +1,22 @@
-import React from 'react';  //comentário Thayná: isso aqui já foi importado no app, então não precisa colocar nos componentes
+import React from 'react';
 
 const creators = [
   { name: 'Fulano', role: 'Design gráfico' },
   { name: 'Fulano', role: 'Design gráfico' },
   { name: 'Fulano', role: 'Design gráfico' },
   { name: 'Fulano', role: 'Design gráfico' },
-]; 
+];
 
 const CreatorsSection = () => (
-  <section className="creatorsSection">
+  <section className="creators-section">
     <h3>Idealizadores</h3>
     {creators.map((creator, index) => (
-      <article key={index} className="creatorCard">
-        <figure className="photoPlaceholder" aria-label="Photo Placeholder"></figure>
+      <article key={index} className="creator-card">
+        <figure className="photo-placeholder" aria-label="Photo Placeholder"></figure>
         <div>
           <h4>{creator.name}</h4>
-          <p className="creatorRole">{creator.role}</p>
-          <p className="creatorDescription">
+          <p className="creator-role">{creator.role}</p>
+          <p className="creator-description">
             texto falando sobre fulano, o que faz como designer, redes sociais,
             informações relevantes. texto falando sobre fulano, o que faz como
             designer, redes sociais, informações relevantes.

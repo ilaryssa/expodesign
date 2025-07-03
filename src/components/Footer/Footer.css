@@ -1,10 +1,7 @@
-.footer {   /*cometário Thayná: ajusta o css pra ficar padronizado com o restante*/
-            /*coloca logo-and-copy-right, menu-footer*/
-            /*o nome usando letras maiusculas deixa pra nome do arquivo e nome de função*/
-            /*não esquece de ajustar no jsx também, já que as classes são de lá*/
+.footer {
     background-color: #dfdfdf;
     height: 20vh;
-    width: 100v;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,7 +9,7 @@
     box-sizing: border-box;
 }
 
-.logoAndCopyright {
+.logo-and-copyright {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,14 +34,14 @@
     width: 50%;
 }
 
-.menuFooter {
+.menu-footer {
     display: flex;
     gap: 20px;
     padding-bottom: 10px;
     list-style: none;
 }
 
-.menuFooter li a {
+.menu-footer li a {
     text-decoration: none;
     color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -52,21 +49,21 @@
     transition: color 0.3s;
 }
 
-.menuFooter li a:hover {
+.menu-footer li a:hover {
     color: #555;
 }
 
-.socialMedia {
+.social-media {
     display: flex;
     gap: 15px;
     list-style: none;
 }
 
-.socialMedia li {
+.social-media li {
     cursor: pointer;
     transition: transform 0.2s;
 }
 
-.socialMedia li:hover {
+.social-media li:hover {
     transform: scale(1.1);
 }

@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 import { BsArrowUp } from 'react-icons/bs';
 
 const ScrollToTopButton = () => {
@@ -8,7 +8,7 @@ const ScrollToTopButton = () => {
 
   return (
     <button
-      className="scrollToTopButton"
+      className="scroll-to-top-button"
       onClick={handleScrollToTop}
       aria-label="Scroll to top"
     >

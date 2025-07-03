@@ -1,9 +1,7 @@
-//esse componente não é necessário, você pode fazer essa introdução no próprio arquivo da PAGE
-
-import React from 'react'; 
+import React from 'react';
 
 const IntroSection = () => (
-  <section className="introSection">
+  <section className="intro-section">
     <h2>Porque criar um site para mostrar Design Digital?</h2>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium
@@ -14,7 +12,7 @@ const IntroSection = () => (
       Vestibulum sed lorem et nulla blandit tincidunt. Ut quis turpis euismod,
       tincidunt lorem ac, imperdiet felis. Suspendisse non tincidunt justo.
     </p>
-    <div className="imagePlaceholder" aria-label="Image Placeholder"></div>
+    <div className="image-placeholder" aria-label="Image Placeholder"></div>
   </section>
 );
 

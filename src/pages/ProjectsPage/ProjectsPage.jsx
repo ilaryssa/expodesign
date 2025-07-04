@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import projects from "../../data/projects.json";
 import ProjectsList from "../../components/ProjectsList/ProjectsList.jsx";
 import Filter from "../../components/Filter/Filter.jsx"; 
@@ -7,6 +8,7 @@ import { BsPlusCircle } from "react-icons/bs";
 
 export default function ProjectsPage() {
   const [filter, setFilter] = useState(null);
+  const navigate = useNavigate();
 
   const filteredProjects = filter ? projects.filter((projeto) => {
     if(filter.tipo == "Ano") return projeto.ano === filter.value;
@@ -22,7 +24,7 @@ export default function ProjectsPage() {
       <div className="projects-page-header">
         <h1 className="projects-page-title">PROJETOS</h1>
         <div className="projects-actions">
-          <button className="button-new-project"> <BsPlusCircle className="icon-button-new-project"/> Novo Projeto</button>
+          <button className="button-new-project" onClick={() => navigate("/criar-projeto")}> <BsPlusCircle className="icon-button-new-project"/> Novo Projeto</button>
           <Filter projects={projects} setFilter={setFilter} currentFilter={filter}/>
         </div>
       </div>

@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "nome": "Adobe XD"
+    },
+    {
+        "id": 2,
+        "nome": "Adobe Illustrator"
+    },
+    {
+        "id": 3,
+        "nome": "Adobe Photoshop"
+    },
+    {
+        "id": 4,
+        "nome": "Adobe After Effects"
+    },
+    {
+        "id": 5,
+        "nome": "Blender"
+    },
+    {
+        "id": 6,
+        "nome": "CorelDRAW"
+    },
+    {
+        "id": 7,
+        "nome": "Canva"
+    },
+    {
+        "id": 8,
+        "nome": "Figma"
+    },
+    {
+        "id": 9,
+        "nome": "Inkscape"
+    },
+    {
+        "id": 10,
+        "nome": "Krita"
+    },
+    {
+        "id": 11,
+        "nome": "Kdenlive"
+    },
+    {
+        "id": 12,
+        "nome": "GIMP"
+    },
+    {
+        "id": 13,
+        "nome": "Penpot"
+    },
+    {
+        "id": 14,
+        "nome": "Procreate"
+    },
+    {
+        "id": 15,
+        "nome": "Unity"
+    },
+    {
+        "id": 16,
+        "nome": "Visual Studio Code"
+    }
+]

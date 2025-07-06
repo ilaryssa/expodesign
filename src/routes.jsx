@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
 import CreateProject from './pages/CreateProject/CreateProject';
-import AboutTheSitePage from "./components/AboutTheSite/AboutTheSite";
+import AboutTheSitePage from "./pages/AboutTheSite/AboutTheSite";
 
 export default function AppRoutes(){
     return(

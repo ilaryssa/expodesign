@@ -1,69 +1,92 @@
 .footer {
-    background-color: #dfdfdf;
-    height: 20vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
-    box-sizing: border-box;
+  background-color: var(--darkPurple);
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 24px;
+  color: var(--iceWhite);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .logo-and-copyright {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  min-width: 200px;
 }
 
 .logo {
-    width: 120px;
-    height: 50px;
-    margin-bottom: 8px;
+  color: var(--iceWhite);
+  width: 120px;
+  height: 50px;
+  margin-bottom: 8px;
 }
 
 .copyright {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 0.85rem;
+  font-size: 0.85rem;
+  color: var(--iceWhite);
 }
 
 .links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex: 1;
+  min-width: 200px;
 }
 
 .menu-footer {
-    display: flex;
-    gap: 20px;
-    padding-bottom: 10px;
-    list-style: none;
+  display: flex;
+  gap: 20px;
+  padding-bottom: 10px;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .menu-footer li a {
-    text-decoration: none;
-    color: black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 0.9rem;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: var(--iceWhite);
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: color 0.3s, border-bottom 0.3s;
 }
 
 .menu-footer li a:hover {
-    color: #555;
+  color: var(--lightPurple);
+  border-bottom: 1px solid var(--lightPurple);
 }
 
 .social-media {
-    display: flex;
-    gap: 15px;
-    list-style: none;
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .social-media li {
-    cursor: pointer;
-    transition: transform 0.2s;
+  cursor: pointer;
+  transition: transform 0.2s;
+  color: var(--iceWhite);
+  font-size: 1.2rem;
 }
 
 .social-media li:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
+  color: var(--lightPurple);
+}
+
+.menu-and-button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }

@@ -1,0 +1,46 @@
+.info-container {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: left;
+    width: 10%;
+    max-height: max-content;
+    padding-top: 5%;
+    text-align: left;
+}
+
+.info-container p {
+    font-size: 20px;
+    color: var(--darkPurple);
+    padding-bottom: 10%;
+    padding-top: 20%;
+}
+
+.info-container li {
+    display: inline-block;
+    list-style-type: none;
+    text-align: left;
+    font-size: 17px;
+    padding-bottom: 5px;
+}
+
+.subject-list li, .tools-list li{
+    background-color: var(--darkPurple);
+    color: var(--iceWhite);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 16px;
+    margin-right: 5px;
+    font-size: medium;
+    margin-bottom: 10px;
+}
+
+.author-list {
+    display:grid;
+    color: var(--darkPurple);
+    gap: 10px;
+}
+
+.test-ano {
+    color: var(--darkPurple    );
+}

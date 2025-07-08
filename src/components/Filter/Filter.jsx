@@ -1,74 +1,93 @@
-import { useState, useEffect } from "react";
+import {useState, useRef, useEffect} from 'react';
 import "./Filter.css";
 
 export default function Filter({projects, setFilter}) {
-    const [filters, setFilters] = useState({});
+
     const [openMenu, setOpenMenu] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState(null);
-    const [selectedValue, setSelctedValue] = useState(null);
+    const [selectedValue, setSelectedValue] = useState(null);
+    const dropdownRef = useRef(null); //useRef é usado para referenciar o elemento do dropdown, assim podemos verificar cliques fora dele (usado posteriormente)
 
-    useEffect(() => { // Popula os filtros com base nos projetos    
-        const newFilters = { // Cria um objeto para armazenar os filtros
-            Ano:[...new Set(projects.map((p) => p.ano))].sort((a,b) => b - a), //.map extrai os anos dos projetos; para cada projeto, p.ano retorna o ano do projeto; sort((a,b) => b - a) ordena os anos em ordem decrescente
-            Disciplina:[...new Set(projects.map((p) => p.disciplina))].sort(),
-            Categoria:[...new Set(projects.flatMap((p) => p.tags))].sort(),
-            Autor:[...new Set(projects.map((p) => p.autor))].sort(),
-        };
-        setFilters(newFilters);
-    }, [projects]);
+    const newFilters = [
+        {
+            nome: "Ano",
+            valores: [...new Set(projects.map((p) => p.ano))].sort((a, b) => b - a)
+        },
+        {
+            nome: "Disciplina",
+            valores: [...new Set(projects.flatMap((p) => p.disciplina))].sort()
+        },
+        {
+            nome: "Categoria",
+            valores: [...new Set(projects.flatMap((p) => p.tags))].sort()
+        },
+        {
+            nome: "Autor",
+            valores: [...new Set(projects.flatMap((p) => p.autor))].sort()
+        }
+    ];
 
-    const handleCategoryClick = (category) => {
-        setSelectedCategory(category);
-    };
+    useEffect(() => {
+        function clickOut(e) {
+            if(dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+                setOpenMenu(false);
+                setSelectedCategory(null);
+            }
+        }
 
+        document.addEventListener("mousedown", clickOut);
+        return () => {
+            document.removeEventListener("mousedown", clickOut);
+        }
+    }, []);
+    
     const clearFilter = () => {
         setFilter(null);
-        setSelctedValue(null);
+        setSelectedValue(null);
         setSelectedCategory(null);
     };
 
-    return (
-        <div className="filter-container" alt="Filtro de projetos">
-            <h3 className="filter-title">Filtrar por:</h3>
+    return(
+        <div className="filter-container" ref={dropdownRef}>
+            <h3 className="filter-title"> Filtrar por: </h3>
             <div className="filter-wrapper">
                 <div className="dropdown">
                     <button className="select-button" onClick={() => {
-                        setOpenMenu(!openMenu); //
+                        setOpenMenu(!openMenu);
                         setSelectedCategory(null);
                     }}>
                         {selectedValue || "Selecionar"}
                     </button>
+
                     {openMenu && (
                         <div className="dropdown-menu">
                             <div className="left-column">
-                                {Object.keys(filters).map((category) => (<div key={category} onClick={() => handleCategoryClick(category)} className={`filter-item ${selectedCategory === category ? "ativo" : ""}`}
-                                > 
-                                    {category}
-                                </div>
-                            ))}
+                                {newFilters.map((filter) => (
+                                    <div key={filter.nome} onClick={() => setSelectedCategory(filter.nome)} className={`filter-item ${selectedCategory === filter.nome ? "ativo" : ""}`}>
+                                        {filter.nome}
+                                    </div>
+                                ))}
                             </div>
 
-                            {selectedCategory && (
-                                <div className="right-column">
-                                    {filters[selectedCategory].map((value) => (
-                                        <div key={value} onClick={() => {
-                                            setFilter({tipo: selectedCategory, value});
-                                            setSelctedValue(value);
-                                            setOpenMenu(false);
-                                            setSelectedCategory(null);
-                                        }}
-                                        className="value-item"
-                                        >
-                                            {value}
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
+                            <div className="right-column">
+                                {selectedCategory && newFilters.find((f) => f.nome === selectedCategory)?.valores.map((value) => (
+                                    <div key={value} onClick={() => {
+                                        setFilter({
+                                            tipo: selectedCategory,
+                                            value: value
+                                        });
+                                        setSelectedValue(value);
+                                        setOpenMenu(false);
+                                        setSelectedCategory(null);
+                                    }} className="value-item">
+                                        {value}
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     )}
                 </div>
-
-                <button className="clear-button" onClick={clearFilter}> Limpar </button>
+                    <button className="clear-button" onClick={clearFilter}> Limpar </button>
             </div>
         </div>
     );

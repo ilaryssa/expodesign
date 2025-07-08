@@ -15,7 +15,7 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const logout = () => {
-    navigate("/projetos"); //criar a nova tela de usuario
+    navigate("/login"); //criar a nova tela de usuario
     setOpenAlert(false); //obrigada laryssa
   }
 
@@ -27,7 +27,7 @@ export default function Navbar() {
         {/*logo*/}
         {/*<a href="expodesign-logo.svg"><img className="logo" src="logo.svg" alt="Logo" /></a>*/}
 
-        <Link to="/projetos" className="logo"><Logo/></Link>
+        <Link to="/" className="logo"><Logo/></Link>
 
         {/*barra de pesquisa*/}
         <div className="search-bar">
@@ -37,7 +37,7 @@ export default function Navbar() {
 
         {/*rotas*/}
         <nav>
-              <Link to="/projetos" className="underline-text-hover">PROJETOS</Link>
+              <Link to="/" className="underline-text-hover">PROJETOS</Link>
               <Link to="/sobre-o-site" className="underline-text-hover">SOBRE O SITE</Link>
               <SubmitProject />
               <a className='hello-admin'><span className="underline-text">Olá, {adminName}!</span></a>

@@ -1,21 +1,18 @@
+* {
+    text-decoration: none;
+}
+
 .projects-card {
-    background-color: #c3adff;
-    border-radius: 10px;
-    overflow: hidden;
     display: flex;
     flex-direction: column; 
     max-width: 374px;
     min-width: 300px;
     width: 100%; /*faz com que o card ocupe 100% do espaço disponível*/
     margin: 1rem; /*margem de 1rem em todos os lados*/
+    cursor: pointer; 
 } 
 
-.projects-card:hover {
-    background-color: #a888ff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-} 
-
-.image-box {
+.image-box { 
     position: relative;
     width: 100%;
     height: 265px;
@@ -28,6 +25,12 @@
     display: block;
     max-width: 374px;
     margin: 0 auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.projects-card:hover {
+    transform: scale(102%); 
 }
 
 .card-tags {
@@ -40,8 +43,8 @@
 }
 
 .card-tags .tag {
-    background-color: rgba(0, 0, 0, 0.75);
-    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--iceWhite);
     font-size: 11px;
     font-weight: 500;
     padding: 5px 10px;
@@ -60,6 +63,7 @@
     text-overflow: ellipsis; /*adiciona ... no final quando o texto for "cortado"*/
     text-align: left;
     padding: 10px;
+    color: var(--darkPurple);
 }
 
 .projects-trash {
@@ -67,15 +71,15 @@
     top: 10px;
     right: 10px;
     cursor: pointer;
-    color: #fff;
+    color: var(--iceWhite);
     font-size: 24px;
-    background-color: grey;
-    border: 5px solid grey;
+    background-color: var(--lightPurple);   
+    border: 5px solid var(--lightPurple);
     border-radius: 5px;
 }
 
 .projects-trash:hover {
-    color: grey;
-    background-color: #fff;
-    border: 5px solid #fff;
+    color: var(--darkPurple);
+    background-color: var(--iceWhite);
+    border: 5px solid var(--iceWhite);
 }

@@ -14,6 +14,7 @@
     font-size: 37px;
     font-weight: bold;
     text-align: left;
+    color: var(--darkPurple);
 }
 
 .projects-actions {
@@ -27,8 +28,8 @@
     width: 140px;
     height: 40px;
     padding: 8px 16px;
-    background: #898989;
-    color: white;
+    background: var(--midPurple);
+    color: var(--iceWhite);
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -38,7 +39,8 @@
 }
 
 .button-new-project:hover {
-    background: #5d5d5d;
+    background: var(--lightPurple);
+    color: var(--darkPurple);
 }
 
 .icon-button-new-project {

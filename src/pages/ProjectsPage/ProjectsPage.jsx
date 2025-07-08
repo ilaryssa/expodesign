@@ -13,8 +13,8 @@ export default function ProjectsPage() {
   const filteredProjects = filter ? projects.filter((projeto) => {
     if(filter.tipo == "Ano") return projeto.ano === filter.value;
     if(filter.tipo == "Categoria") return projeto.tags.includes(filter.value);
-    if(filter.tipo == "Disciplina") return projeto.disciplina === filter.value;
-    if(filter.tipo == "Autor") return projeto.autor === filter.value;
+    if(filter.tipo == "Disciplina") return projeto.disciplina.includes(filter.value);
+    if(filter.tipo == "Autor") return projeto.autor.includes(filter.value); //usa-se includes para verificar se o autor está na lista de autores do projeto para que apareça corretamente projetos com múltiplos autores
     return true;
   })
   : projects;

@@ -55,7 +55,6 @@
   color: var(--iceWhite);
   font-weight: bold;
   font-size: 0.9rem;
-  transition: color 0.3s, border-bottom 0.3s;
 }
 
 .menu-footer li a:hover {

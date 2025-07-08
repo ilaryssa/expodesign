@@ -1,0 +1,28 @@
+#root {
+  max-width: auto;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%; /*body ocupa 100% do espaço disponível */
+  background-color: var(--cloudGrey);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--darkPurple) var(--cloudGrey);
+}
+
+@media (max-width: 900px) {
+    .projects-page-header {
+        flex-direction: column; /*alinha os itens verticalmente*/
+        align-items: flex-start; 
+    }
+    .projects-actions {
+        flex-direction: column; 
+        gap: 16px;
+    }
+    
+    .projects-page-title {
+        margin-bottom: 16px;
+    }
+  }

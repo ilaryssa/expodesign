@@ -8,11 +8,13 @@ import LogInPage from "./pages/LogInPage/LogInPage";
 export default function AppRoutes(){
     return(
         <Routes>
-            <Route index element ={<ProjectsPage />} />
-            <Route path="/sobre-o-site" element ={<AboutTheSitePage />} />
-            <Route path="/criar-projeto" element ={<CreateProject />} /> 
-            <Route path="/projeto/:id" element ={<ProjectDetailPage />} />
-            <Route path="/login" element={<LogInPage/>}/>
+            <Route index element={<ProjectsPage />} />
+            <Route path="/projetos" element={<ProjectsPage />} />
+            <Route path="/sobre-o-site" element={<AboutTheSitePage />} />
+            <Route path="/criar-projeto" element={<CreateProject />} /> 
+            <Route path="/projeto/:id" element={<ProjectDetailPage />} />
+            <Route path="/login" element={<LogInPage />} />
         </Routes>
+
     )
 } 

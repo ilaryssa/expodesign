@@ -10,6 +10,8 @@
   gap: 24px;
   color: var(--iceWhite);
   font-family: Arial, Helvetica, sans-serif;
+  position: fixed;
+  bottom: 0;
 }
 
 .logo-and-copyright {
@@ -21,7 +23,7 @@
   min-width: 200px;
 }
 
-.logo-img {
+.logo {
   color: var(--iceWhite);
   width: 120px;
   height: 50px;

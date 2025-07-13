@@ -9,9 +9,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="logo-and-copyright">
         <div className="logo">
-          <Link to="/projetos">
-            <img src={Logo} alt="Expo Design Logo" className="logo-img" />
-          </Link>
+          <Link to="/" className="logo"><Logo/></Link>
         </div>
         <p className="copyright">© 2025 Todos os direitos reservados.</p>
       </div>

@@ -1,10 +1,10 @@
 import ProjectsCard from "../ProjectCard/ProjectsCard";
 import "./ProjectsList.css";
 
-export default function ProjectsList({projeto}) {
+export default function ProjectsList({projetos}) {
   return (
     <div className="projects-list">
-      {projeto.map((projeto) => (
+      {projetos.map((projeto) => (
         <ProjectsCard key={projeto.id} projeto={projeto}/>
       ))}
     </div>

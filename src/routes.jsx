@@ -9,7 +9,6 @@ export default function AppRoutes(){
     return(
         <Routes>
             <Route index element={<ProjectsPage />} />
-            <Route path="/projetos" element={<ProjectsPage />} />
             <Route path="/sobre-o-site" element={<AboutTheSitePage />} />
             <Route path="/criar-projeto" element={<CreateProject />} /> 
             <Route path="/projeto/:id" element={<ProjectDetailPage />} />

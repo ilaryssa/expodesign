@@ -16,7 +16,6 @@
   padding-inline: 20px;
   z-index: 1000;
   background-color: var(--darkPurple);
-  font-family:Arial, Helvetica, sans-serif;
   font-size: medium;
   box-sizing: border-box;
 }
@@ -67,27 +66,9 @@ nav a{
   color: var(--lightPurple);
   border-radius: 10px;
 }
-.search-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px; /* Ajustar a margem direita para centralizar a barra de pesquisa */
-  background-color: #F8F8F8; /*iceWhite*/;
-  border-radius: 25px;
-  padding: 5px;
-  width: 22%;
-}
-.search-bar input {
-  border: none;
-  outline: none;
-  padding: 7px 15px 7px 15px;
-  background-color: transparent;
-  font-size: small;
-  width: 100%;
-}
+
 .search-icon{
   margin-left: 10px;
-  color: #532980; /*darkPurple*/
-
+  color: var(--darkPurple); 
 }
 

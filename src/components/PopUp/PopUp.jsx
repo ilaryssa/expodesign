@@ -1,5 +1,6 @@
-import React from "react";
+import React from "react";//não é necessário
 import "./PopUp.css";
+//thayna coment: o componente não está sendo chamado em nenhum lugar. além diso há o ccompponnet alert, que agora está mais funcional
 
 function PopUp({ onConfirm, onCancel }) {
   return (

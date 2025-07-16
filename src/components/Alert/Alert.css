@@ -20,9 +20,16 @@
 
 .alert-body{
     padding: 10px;
+    /* text-align: left; */
+    /* Thayna comment: acho que ficaria mais interessante os textos alinhados à esquerda, e vocês? */
 }
 
-.alert-title{
+.alert-message {
+    font-size: medium;
+    color: var(--darkPurple);
+    padding-bottom: 5px;
+}
+.alert-question{
     font-size:large;
     padding-bottom: 10px;
     color: var(--darkPurple);

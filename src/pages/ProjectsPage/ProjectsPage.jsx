@@ -5,10 +5,16 @@ import ProjectsList from "../../components/ProjectsList/ProjectsList.jsx";
 import Filter from "../../components/Filter/Filter.jsx"; 
 import "./ProjectsPage.css";
 import { BsPlusCircle } from "react-icons/bs";
+import NavBar from "../../components/NavBar/NavBar.jsx";
 
 export default function ProjectsPage() {
   const [filter, setFilter] = useState(null);
   const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+  };
 
   const filteredProjects = filter ? projects.filter((projeto) => {
     if(filter.tipo == "Ano") return projeto.ano === filter.value;
@@ -18,9 +24,10 @@ export default function ProjectsPage() {
     return true;
   })
   : projects;
-
+  
   return (
     <div className="projects-page-container">
+      <NavBar onSearch={handleSearch} />
       <div className="projects-page-header">
         <h1 className="projects-page-title">PROJETOS</h1>
         <div className="projects-actions">
@@ -28,7 +35,7 @@ export default function ProjectsPage() {
           <Filter projects={projects} setFilter={setFilter} currentFilter={filter}/>
         </div>
       </div>
-        <ProjectsList projeto={filteredProjects}/>
+        <ProjectsList projetos={filteredProjects} searchQuery={searchQuery}/>
     </div>
   );
 }

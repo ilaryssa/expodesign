@@ -1,31 +1,29 @@
 import './ProjectDetail.css'
-import projects from "../../data/projects.json"
-import {useParams} from "react-router-dom";
 
-export default function ProjectDetail() {
-    const { id } = useParams(); // obtém o ID do projeto da URL
-    const projectId = parseInt(id);  
-    const project = projects.find((p) => p.id === projectId); //encontra o projeto correspondente ao ID
-
-    if(!project) return <p>Projeto não encontrado</p>;
+export default function ProjectDetail({ project }) {
 
     return(
         <div className="project-detail-container">
             <div>
-                <h1 className="project-detail-title">{project.titulo}</h1>
+                <h1 className="project-detail-title">{project.title}</h1>
 
-                <img className="project-detail-image" src={project.imagem[0] || "/placeholder.png"} alt={project.titulo}/>
+                <img className="project-detail-image" src={project.cover || "/placeholder.png"} alt={project.title}/>
                 {/* <Carousel/> */}
             
                 <section className="project-detail-description">
                     <p className="description-title"><strong>Descrição</strong></p>
-                    <p>{project.descricao}</p>
+                    <p>{project.description}</p>
                 </section>
 
                 <section className="project-detail-gallery">
-                    {project.imagem.slice(1).map((image, i) => (
-                        <img className="project-detail-image" key={i} src={image || "/placeholder.png"} alt={`${project.titulo} - imagem ${i + 1}`}/>
-                    ))}
+                    <p className="gallery-title"><strong>Galeria</strong></p>
+                    {project.images && project.images.length > 0 ? (
+                        project.images.map((image, index) => (
+                            <img key={index} src={image} alt={`Imagem ${index + 1}`} className="project-detail-gallery-image" />
+                        ))
+                    ) : (
+                        <p>Nenhuma imagem adicionada.</p>
+                    )}
                 </section>
             </div>
         </div>

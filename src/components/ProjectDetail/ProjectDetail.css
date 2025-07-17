@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 80%;
+    width: 60%;
     padding-left: 10%;
     padding-top: 2%;
     padding-right: 10%;
@@ -43,6 +43,29 @@
     padding-bottom: 1%;
 }
 
+.gallery-title{
+    font-size: 20px;
+    color: var(--darkPurple);
+    padding-bottom: 1%;
+    margin-top: 20px;
+}
+
 .project-detail-gallery {
-    margin-bottom: 100px;
+    width: 400px; 
+    /* alterar aquiiii o width */
+    object-fit: cover; 
+    border-radius: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* aqui que muda o detalhe*/
+.project-detail-gallery img {
+    border-radius: 20px;
+    padding: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    display: block;
 }

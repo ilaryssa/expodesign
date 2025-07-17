@@ -10,7 +10,7 @@
   gap: 24px;
   color: var(--iceWhite);
   font-family: Arial, Helvetica, sans-serif;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
 }
 

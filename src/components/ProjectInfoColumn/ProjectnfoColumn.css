@@ -2,8 +2,8 @@
     display: block;
     flex-wrap: wrap;
     justify-content: left;
-    width: 10%;
-    max-height: max-content;
+    width: 15%;
+    min-height: 100vh; /*nao netendi*/
     padding-top: 5%;
     text-align: left;
 }

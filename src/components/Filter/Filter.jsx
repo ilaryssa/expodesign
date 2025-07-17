@@ -11,19 +11,19 @@ export default function Filter({projects, setFilter}) {
     const newFilters = [
         {
             nome: "Ano",
-            valores: [...new Set(projects.map((p) => p.ano))].sort((a, b) => b - a)
+            valores: [...new Set(projects.map((p) => p.year))].sort((a, b) => b - a)
         },
         {
             nome: "Disciplina",
-            valores: [...new Set(projects.flatMap((p) => p.disciplina))].sort()
+            valores: [...new Set(projects.flatMap((p) => p.disciplines.map(d => d.nome)))].sort()
         },
         {
-            nome: "Categoria",
-            valores: [...new Set(projects.flatMap((p) => p.tags))].sort()
+            nome: "Ferramenta",
+            valores: [...new Set(projects.flatMap((p) => p.tools.map(t => t.nome)))].sort()
         },
         {
             nome: "Autor",
-            valores: [...new Set(projects.flatMap((p) => p.autor))].sort()
+            valores: [...new Set(projects.flatMap((p) => p.authors))].sort()
         }
     ];
 

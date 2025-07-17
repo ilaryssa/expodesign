@@ -1,5 +1,6 @@
 .projects-list {
     display: grid;
+    min-height: 100vh; /*tela total*/
     grid-template-columns: repeat(auto-fit, 400px); /*cria quantas colunas couberem com 500px cada*/
     justify-content: center;
     gap: 30px;

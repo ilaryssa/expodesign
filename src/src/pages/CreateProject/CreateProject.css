@@ -1,0 +1,231 @@
+input::file-selector-button {
+  background-color: var(--darkPurple);
+  color: var(--cloudGrey);
+  padding-inline: 8px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--iceWhite);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.create-project-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.create-project-form {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+/*informações principais do projeto*/
+.project-info {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.project-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--lightPurple);
+    max-width: 600px;
+    min-height: 50px;
+    border: none;
+    background-color: transparent;
+    margin-bottom: 15px;
+}
+
+.project-group-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-label {
+  font-size: 18px;
+  font-style: bold;
+  color: var(--darkPurple);
+  font-weight: 500;
+  display: flex;
+  align-self: start;
+  gap: 8px;
+}
+
+.project-group-inputs textarea {
+    height: 300px;           
+    max-width: 600px;        
+    width: 100%;
+    resize: none;          
+    padding: 15px;
+    border-radius: 10px;
+    border-color:var(--midPurple);
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--iceWhite);
+
+}
+
+.label-add-cover{
+  display: flex;
+  align-items: start;
+  gap: 8px;
+}
+
+.project-cover-image {
+  width: 100%;
+  max-width: 600px;
+  height: 260px;
+  object-fit: contain;
+  background-color: #d9d9d9; /* completando a imagem que ficou pequena aqui,e segue o nmesmo pros outros */
+  border-radius: var(--radius);
+}
+
+.project-image{
+  width: 100%;
+  max-width: 600px;
+  height: 260px;
+  object-fit: contain;
+  background-color: var(--cloudGrey); /* completando a imagem que ficou pequena aqui,e segue o nmesmo pros outros */
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+}
+
+.project-extras {
+ 
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  gap: 20px;
+}
+
+.author-input textarea{
+    height: 150px;
+    max-width: 600px;
+    width: 100%;
+    resize: none;
+    gap: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-color:var(--midPurple);
+    padding: 10px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--iceWhite);
+    
+}
+
+.year-input input{
+  width: 100%;
+  border: 1px solid var(--midPurple);
+  border-radius: 5px;
+  padding: 10px;
+  background-color: var(--iceWhite);
+}
+
+.year-input input:focus {
+  outline: none;
+  border-color: var(--darkPurple);
+}
+
+.discipline-item{
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.disciplines-box {
+  border-radius: var(--radius);
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: var(--iceWhite);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+
+.tool-item {
+  display: flex;
+  align-items:flex-end;
+  gap: 5px;
+  font-size: 15px;
+  padding: 5px;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--lightPurple);
+  width: 15px;
+  height: 15px;
+}
+
+
+.tools-box {
+  border-radius: var(--radius);
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: var(--iceWhite);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.buttons button { /*rapaz*/
+  padding: 10px 30px;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+.save {
+  background-color: var(--darkPurple);
+  color: white;
+}
+
+.save:hover {
+  background-color: var(--midPurple);
+}
+
+.cancel {
+  background-color: var(--lightPurple);
+  color: white;
+}
+
+.cancel:hover {
+  background-color: var(--midPurple);
+}
+
+
+
+@media (max-width: 900px) {
+  .create-project-form {
+    flex-direction: column;
+  }
+
+  .project-info,
+  .project-extras {
+    flex: 1 1 100%;
+  }
+}

@@ -1,0 +1,71 @@
+.project-detail-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 60%;
+    padding-left: 10%;
+    padding-top: 2%;
+    padding-right: 10%;
+}
+
+.project-detail-title {
+    margin-top: 50px;
+    font-size: 37px;
+    font-weight: bold;
+    text-align: left;
+    color: var(--darkPurple);
+    padding-bottom: 5%;
+}
+
+.project-detail-image {
+    max-height: 500px;
+    width: 80%;
+    object-fit: cover; 
+    border-radius: 20px;
+    margin-bottom: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.project-detail-description {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: left;
+    font-size: 17px;
+    color: var(--darkPurple);
+    /* width: 80%; */
+}
+
+.description-title {
+    font-size: 20px;
+    color: var(--darkPurple);
+    padding-bottom: 1%;
+}
+
+.gallery-title{
+    font-size: 20px;
+    color: var(--darkPurple);
+    padding-bottom: 1%;
+    margin-top: 20px;
+}
+
+.project-detail-gallery {
+    width: 400px; 
+    /* alterar aquiiii o width */
+    object-fit: cover; 
+    border-radius: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* aqui que muda o detalhe*/
+.project-detail-gallery img {
+    border-radius: 20px;
+    padding: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    display: block;
+}

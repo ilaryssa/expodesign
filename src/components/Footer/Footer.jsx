@@ -17,7 +17,7 @@ export default function Footer() {
       <nav className="links">
         <div className="menu-and-button">
           <ul className="menu-footer">
-            <li><Link to="/projetos">Projetos</Link></li>
+            <li><Link to="/">Projetos</Link></li>
             <li><Link to="/sobre-o-site">Sobre o site</Link></li>
           </ul>
           <SubmitProject />
@@ -30,7 +30,7 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="https://wa.me/5599999999999" target="_blank" rel="noopener noreferrer">
+            <a href="https://whatsapp.com/channel/0029Vb6OetWKLaHu86lcrE25" target="_blank" rel="noopener noreferrer">
               <BsWhatsapp size={24} />
             </a>
           </li>

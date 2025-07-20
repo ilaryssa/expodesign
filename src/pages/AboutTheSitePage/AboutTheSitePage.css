@@ -1,20 +1,25 @@
+.about-the-site-page {
+  background-color: var(--cloudGrey);
+}
+
 .about-the-site-container {
   padding: 40px 20px;
-  max-width: 700px;
+  /* max-width: 700px; */
+  max-width: 100vh;
   margin: 0 auto;
   font-family: Arial, sans-serif;
-  color: #000;
+  color: var(--darkPurple);
   text-align: left;
 }
 
 .intro-section h2 {
-  font-size: 18px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .intro-section p {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.4;
   margin-bottom: 10px;
 }
@@ -22,7 +27,7 @@
 .image-placeholder {
   width: 100%;
   height: 200px;
-  background-color: #dfdfdf;
+  background-color: var(--iceWhite);
   border-radius: 10px;
   margin-top: 20px;
 }

@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { onValue, ref } from "firebase/database";
 import { db } from "../../fireConfig.js";
-import Navbar from "../../components/Navbar/Navbar.jsx";
+import Navbar from "../../components/NavBar/NavBar.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 
 export default function ProjectDetailPage() {

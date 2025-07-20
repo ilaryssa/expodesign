@@ -1,5 +1,5 @@
 .creators-section h3 {
-  font-size: 18px;
+  font-size: 25px;
   font-weight: bold;
   margin-bottom: 20px;
   margin-top: 40px;
@@ -21,19 +21,21 @@
 }
 
 .creator-card h4 {
-  font-size: 14px;
+  font-size: 20px;
   margin: 0;
   font-weight: bold;
 }
 
 .creator-area {
   margin: 4px 0;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 16px;
+  /* font-weight: bolder; */
+  /* background-color: var(--lightPurple); */
 }
 
 .creator-description {
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 4px;
   text-align: justify;
+  font-weight:lighter;
 }

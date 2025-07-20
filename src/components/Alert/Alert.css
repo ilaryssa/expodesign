@@ -5,9 +5,11 @@
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     display: flex;
+    top: 0;
+    left: 0;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    z-index: 9999;
 }
 
 .alert-container{
@@ -20,7 +22,7 @@
 
 .alert-body{
     padding: 10px;
-    /* text-align: left; */
+    text-align: center;
     /* Thayna comment: acho que ficaria mais interessante os textos alinhados à esquerda, e vocês? */
 }
 
@@ -46,7 +48,7 @@
     background-color: var(--darkPurple);
     color: var(--iceWhite);
     border: none;
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 8px;
     cursor: pointer;
 }
@@ -55,7 +57,7 @@
     background-color: var(--lightPurple);
     color: var(--iceWhite);
     border: none;
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 8px;
     cursor: pointer;
 }

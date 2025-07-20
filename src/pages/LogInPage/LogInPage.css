@@ -28,7 +28,7 @@
 }
 
 /* css para a section */
-section {
+.login-section {
     display: flex;
     align-items: center;
     justify-content: center;

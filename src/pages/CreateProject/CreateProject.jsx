@@ -5,6 +5,8 @@ import disciplines from '../../data/disciplines.json'; //nem precisa mais
 import ImgNotSelected from '../../assets/img-not-selected.png';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
+import Alert from '../../components/Alert/Alert';
+import { Link } from 'react-router-dom';
 
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../../supabaseConfig';
@@ -30,6 +32,13 @@ export default function CreateProject() {
 
   const [images, setImages] = useState([]);
   const [imagesFiles, setImagesFiles] = useState([]);
+
+  const [openAlert, setOpenAlert] = useState(false);
+
+  // const handleSave = () => {
+  //   navigate("/"); 
+  //   setOpenAlert(false);
+  // }
 
   function handleCover(e) {
     setCover(URL.createObjectURL(e.target.files[0]));
@@ -137,7 +146,8 @@ export default function CreateProject() {
       await set(newProjectRefId, NewProject);
 
       alert('Projeto criado com sucesso!');
-
+      setOpenAlert(false);
+      navigate("/");
 
     } catch (error) {
       console.error('Erro ao criar o projeto:', error);
@@ -150,6 +160,15 @@ export default function CreateProject() {
 
   return (
     <>
+    {openAlert && 
+      <Alert setOpen= {setOpenAlert} 
+      onConfirm={handleSubmit}
+      message='Após publicar o projeto, você não conseguirá mais editar as informações, apenas excluir.'
+      question="Você tem certeza que quer publicar este projeto?"
+      cancel="Cancelar" 
+      confirm="Continuar"
+    />} 
+
     <NavBar />
     <div className="create-project-container">
       <form className="create-project-form"> {/*criando o forms aqui*/}
@@ -224,7 +243,7 @@ export default function CreateProject() {
         </div>
       </form>
       <div className='buttons'>
-        <button onClick={handleSubmit} type='button' className='save'>Salvar</button>
+        <button onClick={() => setOpenAlert(true)} type='button' className='save'>Salvar</button>
         <button type='button' className='cancel' onClick={() => navigate(-1)}>Cancelar</button>
       </div>
     </div>

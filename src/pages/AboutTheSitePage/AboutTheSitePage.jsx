@@ -1,11 +1,12 @@
 import './AboutTheSitePage.css'
 import Creators from "../../components/Creators/Creators";
-import NavBar  from '../../components/NavBar/NavBar'
+import Navbar from "../../components/NavBar/NavBar";
+import Footer from '../../components/Footer/Footer';
 export default function AboutTheSitePage() {
 
     return (
-     <>
-
+     <div className="about-the-site-page">
+        <Navbar showSearchBar={false}/>
         <main className="about-the-site-container">
             <section className="intro-section">
                 <h2>Porque criar um site para mostrar Design Digital?</h2>
@@ -17,7 +18,8 @@ export default function AboutTheSitePage() {
             </section>
             <Creators/>
         </main>
-     </>   
+        <Footer />
+     </div>   
 
     );
 }

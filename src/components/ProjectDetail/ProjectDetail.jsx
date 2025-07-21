@@ -17,13 +17,15 @@ export default function ProjectDetail({ project }) {
 
                 <section className="project-detail-gallery">
                     <p className="gallery-title"><strong>Galeria</strong></p>
-                    {project.images && project.images.length > 0 ? (
-                        project.images.map((image, index) => (
-                            <img key={index} src={image} alt={`Imagem ${index + 1}`} className="project-detail-gallery-image" />
-                        ))
-                    ) : (
-                        <p>Nenhuma imagem adicionada.</p>
-                    )}
+                    <div className='gallery-container'>
+                        {project.images && project.images.length > 0 ? (
+                            project.images.map((image, index) => (
+                                <img key={index} src={image} alt={`Imagem ${index + 1}`} className="project-detail-gallery-image" />
+                            ))
+                        ) : (
+                            <p>Nenhuma imagem adicionada.</p>
+                        )}
+                    </div>
                 </section>
             </div>
         </div>

@@ -1,11 +1,11 @@
 // import { BsEye } from 'react-icons/bs';
 import './LogInPage.css';
 import { Link } from 'react-router-dom';
-import BackButton from '../../components/BackButton/BackButton';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from "../../fireConfig";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { BsArrowLeft } from 'react-icons/bs';
 
 export default function LogInPage() {
     const [email, setEmail] = useState("");
@@ -31,7 +31,7 @@ export default function LogInPage() {
     
     return(
         <main className="login-container">
-        <Link><BackButton/> </Link>
+        <Link to='/'><button className='back-button'><BsArrowLeft size={24}/></button> </Link>
         <div className="ola-admin">{olaAdmin} </div>
             <section className='login-section'>
                 <form className="login-content" onSubmit={handleLogin}>

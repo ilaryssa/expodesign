@@ -1,7 +1,9 @@
+import { useEffect, useState } from 'react';
 import './ScrollToTopButton.css';
 import { BsArrowUp } from 'react-icons/bs';
 
 export default function ScrollToTopButton() {
+
     const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     };

@@ -23,7 +23,7 @@ export default function Creators() {
         { 
             name: 'Thayná Cavalcante',
             area: 'Design digital',
-            description: 'texto descritivo de cada idealizador',
+            description: 'Ainda está à procura da sua área de atuação no Design, então não se limita quando encontra novos desafios, como este projeto em questão. Busca sempre aprimorar seus poucos conhecimentos do universo que é o Design.',
             img: "https://i.ibb.co/HTxWgmNh/image.png"
         },
     ];

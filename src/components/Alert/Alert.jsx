@@ -1,7 +1,6 @@
 import './Alert.css';
 
 export default function Alert({setOpen, onConfirm, message = "", question="", confirm="", cancel=""}){
-    // eu que escolhi o nome message, question, confirm e cancel, mas podemos mudar depois
     return (
         <div className='alert-background'>
             <div className='alert-container'>

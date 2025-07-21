@@ -24,9 +24,9 @@ export default function AboutTheSitePage() {
     </div>
             </section>
             <Creators/>
-            <div className='scroll-to-top-button'>
+            {/* <div className='scroll-to-top-button'>
             <ScrollToTopButton />
-            </div>
+            </div> */}
         </main>
         <Footer />
      </div>   

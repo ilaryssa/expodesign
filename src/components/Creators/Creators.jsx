@@ -17,7 +17,7 @@ export default function Creators() {
         { 
             name: 'Lazaro Freitas',
             area: 'Design digital',
-            description: 'undefined',
+            description: 'Apaixonado por explorar o potencial do design, tem grande interesse por áreas criativas, como branding, ilustração, estamparia, design de personagens e criação de materiais publicitários.',
             img: "https://i.ibb.co/R4Bpn73p/image.png"
         },
         { 

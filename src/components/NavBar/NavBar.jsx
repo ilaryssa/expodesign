@@ -1,5 +1,4 @@
 import { Link, useNavigate } from "react-router-dom";
-import { BsSearch } from "react-icons/bs"; 
 import { BsBoxArrowRight } from "react-icons/bs"; 
 import  Logo from '../../assets/expodesign-logo.svg?react';
 import './NavBar.css';
@@ -44,9 +43,7 @@ export default function Navbar({ onSearch, showSearchBar = true }) {
       />}  
 
       <header className="nav-bar">
-        {/*logo*/}
-        {/*<a href="expodesign-logo.svg"><img className="logo" src="logo.svg" alt="Logo" /></a>*/}
-
+  
         <Link to="/" className="logo"><Logo/></Link>
 
         {/*barra de pesquisa*/}

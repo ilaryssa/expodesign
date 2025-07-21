@@ -62,7 +62,7 @@
     -webkit-box-orient: vertical; /*direcao da caixa flexivel*/
     text-overflow: ellipsis; /*adiciona ... no final quando o texto for "cortado"*/
     text-align: left;
-    padding: 10px;
+    padding-top: 10px;
     color: var(--darkPurple);
 }
 

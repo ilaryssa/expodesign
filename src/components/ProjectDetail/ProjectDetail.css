@@ -18,7 +18,8 @@
 }
 
 .project-detail-image {
-    max-height: 500px;
+    /* max-height: 500px; */
+    height: auto;
     width: 80%;
     object-fit: cover; 
     border-radius: 20px;
@@ -35,6 +36,7 @@
     font-size: 17px;
     color: var(--darkPurple);
     /* width: 80%; */
+    white-space: pre-wrap; /* Permite quebras de linha no texto */  
 }
 
 .description-title {
@@ -51,7 +53,7 @@
 }
 
 .project-detail-gallery {
-    width: 400px; 
+    width: 100%; 
     /* alterar aquiiii o width */
     object-fit: cover; 
     border-radius: 50px;
@@ -68,4 +70,10 @@
     width: 100%;
     height: auto;
     display: block;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 260px);
+    gap: 10px; 
 }

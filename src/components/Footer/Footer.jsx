@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import SubmitProject from '../SubmitProject/SubmitProject';
 
 export default function Footer() {
+  
   return (
     <footer className="footer">
       <div className="logo-and-copyright">
@@ -15,12 +16,14 @@ export default function Footer() {
       </div>
 
       <nav className="links">
-        <div className="menu-and-button">
-          <ul className="menu-footer">
+        <div className="menu-and-button" style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+          <ul className="menu-footer" style={{ display: 'flex', alignItems: 'center', gap: '16px', margin: 0, padding: 0, listStyle: 'none' }}>
             <li><Link to="/">Projetos</Link></li>
             <li><Link to="/sobre-o-site">Sobre o site</Link></li>
           </ul>
-          <SubmitProject />
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <SubmitProject />
+          </div>
         </div>
 
         <ul className="social-media">

@@ -218,7 +218,7 @@ export default function CreateProject() {
     <div className="create-project-container">
       <form className="create-project-form"> {/*criando o forms aqui*/}
         <div className="project-info">
-          <input onChange={e => setTitle(e.target.value)} className='project-title' type='text' placeholder='ADICIONAR TÍTULO...' />
+          <input onChange={e => setTitle(e.target.value)} className='project-title' type='text' placeholder='ADICIONAR TÍTULO...' maxLength={100}/>
           <div className='project-group-inputs cover-input'>
             <div className='label-add-cover'>
               <label className='project-label'><BsPlusCircle />Adicionar capa</label>

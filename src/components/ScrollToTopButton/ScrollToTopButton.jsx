@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import './ScrollToTopButton.css';
 import { BsArrowUp } from 'react-icons/bs';
 

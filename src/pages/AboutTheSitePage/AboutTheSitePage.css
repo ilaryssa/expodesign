@@ -23,6 +23,7 @@
   font-size: 16px;
   line-height: 1.4;
   margin-bottom: 10px;
+  text-align: justify;
 }
 
 .image-placeholder {
@@ -37,4 +38,10 @@
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.scroll-to-top-button {
+  right: 30px;
+  bottom: 80px; /* Ajuste conforme a altura do seu footer */
+  z-index: 1000;
 }

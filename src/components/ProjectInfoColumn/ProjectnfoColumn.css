@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     justify-content: left;
     width: 15%;
-    min-height: 100vh; /*nao netendi*/
+    min-height: 100vh; 
     padding-top: 5%;
     text-align: left;
 }

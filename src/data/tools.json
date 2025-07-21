@@ -1,7 +1,7 @@
 [
     {
-        "id": 1,
-        "nome": "Adobe XD"
+        "id": 4,
+        "nome": "Adobe After Effects"
     },
     {
         "id": 2,
@@ -12,40 +12,48 @@
         "nome": "Adobe Photoshop"
     },
     {
-        "id": 4,
-        "nome": "Adobe After Effects"
+        "id": 1,
+        "nome": "Adobe XD"
     },
     {
         "id": 5,
         "nome": "Blender"
     },
     {
-        "id": 6,
-        "nome": "CorelDRAW"
+        "id": 19,
+        "nome": "Camera fotográfica"
     },
     {
         "id": 7,
         "nome": "Canva"
     },
     {
+        "id": 6,
+        "nome": "CorelDRAW"
+    },
+    {
+        "id": 18,
+        "nome": "Desenho à mão livre"
+    },
+    {
         "id": 8,
         "nome": "Figma"
+    },
+    {
+        "id": 12,
+        "nome": "GIMP"
     },
     {
         "id": 9,
         "nome": "Inkscape"
     },
     {
-        "id": 10,
-        "nome": "Krita"
-    },
-    {
         "id": 11,
         "nome": "Kdenlive"
     },
     {
-        "id": 12,
-        "nome": "GIMP"
+        "id": 10,
+        "nome": "Krita"
     },
     {
         "id": 13,
@@ -56,15 +64,19 @@
         "nome": "Procreate"
     },
     {
+        "id": 20,
+        "nome": "Sem uso de software"
+    },
+    {
+        "id": 17,
+        "nome": "Trabalho manual"
+    },
+    {
         "id": 15,
         "nome": "Unity"
     },
     {
         "id": 16,
         "nome": "Visual Studio Code"
-    },
-    {
-        "id": 17,
-        "nome": "Sem software/ trabalho manual"
     }
 ]

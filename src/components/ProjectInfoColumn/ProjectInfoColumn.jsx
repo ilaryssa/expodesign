@@ -1,4 +1,4 @@
-import "./ProjectInfoColumn.css"
+import "./ProjectnfoColumn.css"
 
 export default function ProjectInfoColumn({ project }) {
 

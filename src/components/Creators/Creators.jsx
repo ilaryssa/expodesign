@@ -5,26 +5,26 @@ export default function Creators() {
         { 
             name: 'Ianara Sítila',
             area: 'Design digital',
-            description: 'texto descritivo de cada idealizador',
-            img: "https://i.ibb.co/1GTNHktP/520821395-18400471651114818-3887968629928061291-n.jpg"
+            description: 'Descobrindo sempre novas formas de me encontrar no Design Digital. O Design é uma forma de arte que pode mudar a sua vida.',
+            img: "https://i.ibb.co/20b24fZj/image.png"
         },
         { 
             name: 'Laryssa Santos',
             area: 'Design digital',
-            description: 'texto descritivo de cada idealizador',
+            description: 'Me movimento pelo design gráfico, editorial e 3D, buscando criar experiências visuais que proporcionem algo único em cada projeto.',
             img: "https://i.ibb.co/scLbRqq/image.png"
         },
         { 
             name: 'Lazaro Freitas',
             area: 'Design digital',
-            description: 'texto descritivo de cada idealizador',
-            img: "https://i.ibb.co/Wv3wLd61/image.png"
+            description: 'undefined',
+            img: "https://i.ibb.co/R4Bpn73p/image.png"
         },
         { 
             name: 'Thayná Cavalcante',
             area: 'Design digital',
             description: 'Ainda está à procura da sua área de atuação no Design, então não se limita quando encontra novos desafios, como este projeto em questão. Busca sempre aprimorar seus poucos conhecimentos do universo que é o Design.',
-            img: "https://i.ibb.co/HTxWgmNh/image.png"
+            img: "https://i.ibb.co/MDS8KtYF/image.png" 
         },
     ];
 

@@ -38,7 +38,7 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/ufcquixada/?hl=pt-br" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/ufcquixada" target="_blank" rel="noopener noreferrer">
               <BsInstagram size={24} />
             </a>
           </li>

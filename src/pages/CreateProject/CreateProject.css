@@ -58,6 +58,15 @@ body {
   gap: 8px;
 }
 
+.project-label-alert {
+  font-size: 14px;
+  color: var(--darkPurple);
+  font-weight: 400;
+  margin-bottom: 10px;
+  display: flex;
+  align-self: start;
+}
+
 .project-group-inputs textarea {
     height: 300px;           
     max-width: 600px;        
@@ -197,6 +206,41 @@ input[type="checkbox"] {
   border-radius: 999px;
   cursor: pointer;
   min-width: 120px;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--darkPurple);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid var(--cloudGrey);
+  border-top: 6px solid var(--midPurple);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: var(--cloudGrey);
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .save {

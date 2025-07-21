@@ -16,6 +16,8 @@ import { push, set , ref} from 'firebase/database';
 
 export default function CreateProject() {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
+
 
   const [title, setTitle] = useState("");
 
@@ -89,21 +91,64 @@ export default function CreateProject() {
   async function sendToSupabase(file) {
     try {
       // cria um caminho único para o arquivo
-      const path = 'projects/' + Date.now() + '-' + file.name;
+      const path = 'projects/' + Date.now() + '-' + file.name
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // remove acentos
+      .replace(/\s+/g, '-') // troca espaços por hífen
+      .toLowerCase();
 
       // envia o arquivo para o storage do supabase
       await supabase.storage.from("imagens").upload(path, file);
 
       // obtém a URL pública do arquivo enviado
-      const { data } = supabase.storage.from("imagens").getPublicUrl(path);
+      const { data, error } = await supabase.storage.from("imagens").getPublicUrl(path);
+      if (error) throw error;
       return data.publicUrl;
 
     } catch (error) {
-      console.error('Erro ao enviar arquivo para o Supabase:', error);
+      console.error('Erro ao enviar arquivo para o Supabase:', error.message);
     }
   }
 
+  function validateForm() {
+  if (!title.trim()) {
+    alert("O título é obrigatório.");
+    return false;
+  }
+  if (!coverFile) {
+    alert("A capa do projeto é obrigatória.");
+    return false;
+  }
+  if (!description.trim()) {
+    alert("A descrição é obrigatória.");
+    return false;
+  }
+  if (!author.trim()) {
+    alert("Informe ao menos um autor.");
+    return false;
+  }
+  if (!year.trim()) {
+    alert("O ano é obrigatório.");
+    return false;
+  }
+  if (disciplinesSelected.length === 0) {
+    alert("Selecione ao menos uma disciplina.");
+    return false;
+  }
+  if (toolsSelected.length === 0) {
+    alert("Selecione ao menos uma ferramenta.");
+    return false;
+  }
+
+  return true;
+}
+
+
   async function handleSubmit() {
+
+    if (!validateForm()) return;
+
+    setIsLoading(true);
+
     try {
       // enviar a capa para o Supabase e remover a url local
       const coverUrl = await sendToSupabase(coverFile);
@@ -151,13 +196,13 @@ export default function CreateProject() {
 
     } catch (error) {
       console.error('Erro ao criar o projeto:', error);
+      alert("Erro ao salvar o projeto. Tente novamente.");
+     } finally {
+      setIsLoading(false);
 
     }
   }
-
-
-
-
+  
   return (
     <>
     {openAlert && 
@@ -169,7 +214,7 @@ export default function CreateProject() {
       confirm="Continuar"
     />} 
 
-    <NavBar />
+    <NavBar showSearchBar={false}/>
     <div className="create-project-container">
       <form className="create-project-form"> {/*criando o forms aqui*/}
         <div className="project-info">
@@ -210,6 +255,7 @@ export default function CreateProject() {
         <div className='project-extras'>
           <div className='project-group-inputs' />
           <label className='project-label'><BsPlusCircle />Adicionar autor</label>
+          <label className='project-label-alert'>Para adicionar mais de um autor separe os nomes com um ENTER (quebra de linha)</label>
           <div className='author-input'>
             <textarea onChange={e => setAuthor(e.target.value)} placeholder='Adicione o(s) nome(s) do(s) autor(es)'></textarea>
           </div>
@@ -243,10 +289,18 @@ export default function CreateProject() {
         </div>
       </form>
       <div className='buttons'>
-        <button onClick={() => setOpenAlert(true)} type='button' className='save'>Salvar</button>
         <button type='button' className='cancel' onClick={() => navigate(-1)}>Cancelar</button>
+        <button onClick={() => setOpenAlert(true)} type='button' className='save'>Salvar</button>
       </div>
     </div>
+
+    {isLoading && (
+    <div className="loading-overlay">
+    <div className="loading-spinner"></div>
+    <p className="loading-text">Salvando projeto...</p>
+  </div>
+)}
+
     <Footer />
     </>
   );

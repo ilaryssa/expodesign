@@ -42,6 +42,9 @@ export default function ProjectsPage() {
           ...data[id]
         });
       }
+      // Inverte a ordem para mostrar os mais recentes primeiro
+      projectsTemp.reverse();
+      
       setProjectsFirebase(projectsTemp);
     });
     

@@ -62,5 +62,9 @@
     {
         "id": 16,
         "nome": "Visual Studio Code"
+    },
+    {
+        "id": 17,
+        "nome": "Sem software/ trabalho manual"
     }
 ]

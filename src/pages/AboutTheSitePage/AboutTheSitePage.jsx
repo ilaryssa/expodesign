@@ -14,7 +14,12 @@ export default function AboutTheSitePage() {
                 <br />
                 Com uma grade interdisciplinar e foco prático, os estudantes aprendem desde fundamentos do design até técnicas avançadas de programação, produção de vídeo, modelagem 3D e experiência do usuário (UX). O ambiente inovador do campus e os laboratórios equipados estimulam projetos experimentais, startups e colaboração com outras áreas como Computação, Engenharia de Software e Jogos Digitais.</p>
     
-                <div className="image-placeholder" aria-label="Image Placeholder"></div>
+                <div className="image-placeholder" aria-label="Image Placeholder">
+        <img 
+            src="https://www.frissononline.com.br/content/images/noticias/Not%C3%ADcias/UFC%20Quixad%C3%A1.jpeg" 
+            alt="Design Digital UFC"
+        />
+    </div>
             </section>
             <Creators/>
         </main>

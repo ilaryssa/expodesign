@@ -1,2 +1,4 @@
 node_modules/
 .env
+src/supabaseConfig.js
+src/fireConfig.js

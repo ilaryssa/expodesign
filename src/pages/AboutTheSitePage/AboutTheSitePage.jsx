@@ -18,7 +18,8 @@ export default function AboutTheSitePage() {
                 <br />
                 <div className="image-placeholder" aria-label="Image Placeholder">
         <img 
-            src="https://www.frissononline.com.br/content/images/noticias/Not%C3%ADcias/UFC%20Quixad%C3%A1.jpeg" 
+            src="https://i.ibb.co/21V9BP7J/Whats-App-Image-2025-07-23-at-13-59-54-1.jpg" 
+            // src="https://www.frissononline.com.br/content/images/noticias/Not%C3%ADcias/UFC%20Quixad%C3%A1.jpeg" 
             alt="Design Digital UFC"
         />
     </div>

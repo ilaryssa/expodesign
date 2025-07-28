@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { BsBoxArrowRight } from "react-icons/bs"; 
+import { BsBoxArrowRight, BsBoxArrowInRight } from "react-icons/bs"; 
 import  Logo from '../../assets/expodesign-logo.svg?react';
 import './NavBar.css';
 import SubmitProject from '../SubmitProject/SubmitProject';
@@ -69,7 +69,7 @@ export default function Navbar({ onSearch, showSearchBar = true }) {
               {user ? (
                 <button className="log-out" onClick={() =>setOpenAlert(true)}><BsBoxArrowRight /></button>
               ) : (
-                <Link to="/login" > Login </Link>
+                <Link to="/login">  <button className="log-out"><BsBoxArrowInRight /></button> </Link>
               )}
         </nav>
       </header>

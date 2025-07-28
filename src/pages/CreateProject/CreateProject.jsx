@@ -218,20 +218,20 @@ export default function CreateProject() {
     <div className="create-project-container">
       <form className="create-project-form"> {/*criando o forms aqui*/}
         <div className="project-info">
-          <input onChange={e => setTitle(e.target.value)} className='project-title' type='text' placeholder='ADICIONAR TÍTULO...' maxLength={100}/>
+          <input onChange={e => setTitle(e.target.value)} className='project-title' type='text' placeholder='Título do projeto...' maxLength={100}/>
           <div className='project-group-inputs cover-input'>
             <div className='label-add-cover'>
-              <label className='project-label'><BsPlusCircle />Adicionar capa</label>
+              <label className='project-label'>Capa do projeto</label>
               <input type='file' onChange={e => handleCover(e)} />
             </div>
             <img src={cover ? cover : ImgNotSelected} alt='Imagem não selecionada' className='project-cover-image' />
           </div>
           <div className='project-group-inputs'>
-            <label className='project-label'><BsPlusCircle />Adicionar descrição e anexos</label>
+            <label className='project-label'>Descrição e anexos</label>
             <textarea onChange={e => setDescription(e.target.value)} placeholder='Adicione sua descrição, links, códigos, anexos...'></textarea>
           </div>
           <div className='project-group-inputs'>
-            <label className='project-label'><BsPlusCircle />Adicionar imagens</label>
+            <label className='project-label'>Imagens para a galeria</label>
             <div className='images-input'>
               <input type='file' multiple onChange={handleImageChange} />
             </div>
@@ -254,18 +254,18 @@ export default function CreateProject() {
         </div>
         <div className='project-extras'>
           <div className='project-group-inputs' />
-          <label className='project-label'><BsPlusCircle />Adicionar autor</label>
+          <label className='project-label'>Autor</label>
           <label className='project-label-alert'>Para adicionar mais de um autor separe os nomes com um ENTER (quebra de linha)</label>
           <div className='author-input'>
             <textarea onChange={e => setAuthor(e.target.value)} placeholder='Adicione o(s) nome(s) do(s) autor(es)'></textarea>
           </div>
-          <label className='project-label'><BsPlusCircle />Adicionar ano</label>
+          <label className='project-label'>Ano</label>
           <div className='year-input'>
             <input onChange={e => setYear(e.target.value)} type='number' placeholder='Adicione o ano'/>
           </div>
 
           <div className='project-group-inputs'>
-            <label className='project-label'><BsPlusCircle /> Adicionar disciplinas</label>
+            <label className='project-label'>Disciplinas</label>
             <div className='disciplines-box'>
               {disciplines.map((discipline, index) => (
                 <div key={index} className="discipline-item">
@@ -276,7 +276,7 @@ export default function CreateProject() {
             </div>
           </div>
           <div className='project-group-inputs'>
-            <label className='project-label'><BsPlusCircle />Adicionar ferramentas</label>
+            <label className='project-label'>Ferramentas</label>
             <div className='tools-box'>
               {tools.map((tool, index) => (
                 <div key={index} className="tool-item">

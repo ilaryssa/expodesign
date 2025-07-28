@@ -14,12 +14,12 @@ export default function Creators() {
             description: 'Me movimento pelo design gráfico, editorial e 3D, buscando criar experiências visuais que proporcionem algo único em cada projeto.',
             img: "https://i.ibb.co/scLbRqq/image.png"
         },
-        { 
-            name: 'Lazaro Freitas',
-            area: 'Design digital',
-            description: 'Apaixonado por explorar o potencial do design, tem grande interesse por áreas criativas, como branding, ilustração, estamparia, design de personagens e criação de materiais publicitários.',
-            img: "https://i.ibb.co/R4Bpn73p/image.png"
-        },
+        // { 
+        //     name: 'Lazaro Freitas',
+        //     area: 'Design digital',
+        //     description: 'Apaixonado por explorar o potencial do design, tem grande interesse por áreas criativas, como branding, ilustração, estamparia, design de personagens e criação de materiais publicitários.',
+        //     img: "https://i.ibb.co/R4Bpn73p/image.png"
+        // },
         { 
             name: 'Thayná Cavalcante',
             area: 'Design digital',

@@ -83,6 +83,11 @@
     gap: 10px; 
 }
 
+.gallery-container img {
+  width: 100%;
+  height: 300px;
+}
+
 .fullscreen-overlay {
   position: fixed;
   top: 0;

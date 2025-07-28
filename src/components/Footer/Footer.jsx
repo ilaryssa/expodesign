@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="logo">
           <Link to="/" className="logo"><Logo/></Link>
         </div>
-        <p className="copyright">© 2025 Todos os direitos reservados.</p>
+        <p className="copyright">© 2025 ExpoDesign. Todos os direitos reservados.</p>
       </div>
 
       <nav className="links">
